@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>25 + 5 Clock</title>
+  </head>
+  <body
+    class="flex items-center justify-center h-screen bg-gray-500 text-white"
+  >
+    <main class="flex flex-col items-center gap-16 w-full">
+      <div class="flex gap-20 text-3xl">
+        <div class="flex flex-col gap-2" id="break">
+          <div id="break-label">Break Length</div>
+          <div class="flex justify-evenly">
+            <button
+              class="px-3 rounded-xl bg-black hover:bg-gray-700"
+              id="break-decrement"
+            >
+              -
+            </button>
+            <div id="break-length">5</div>
+            <button
+              class="px-2 rounded-xl bg-black hover:bg-gray-700"
+              id="break-increment"
+            >
+              +
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-col gap-2" id="session">
+          <div id="session-label">Session Length</div>
+          <div class="flex justify-evenly">
+            <button
+              class="px-3 rounded-xl bg-black hover:bg-gray-700"
+              id="session-decrement"
+            >
+              -
+            </button>
+            <div id="session-length">25</div>
+            <button
+              class="px-2 rounded-xl bg-black hover:bg-gray-700"
+              id="session-increment"
+            >
+              +
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col items-center gap-5 py-2 px-10 border-8 rounded-xl"
+      >
+        <div class="text-3xl" id="timer-label">Session</div>
+        <div class="text-8xl" id="time-left">25:00</div>
+      </div>
+      <div class="flex gap-5 text-xl">
+        <button
+          class="p-2 rounded-lg bg-black hover:bg-gray-700"
+          id="start_stop"
+        >
+          Start/Stop
+        </button>
+        <button class="p-2 rounded-lg bg-black hover:bg-gray-700" id="reset">
+          Reset
+        </button>
+      </div>
+    </main>
+    <audio
+      id="beep"
+      preload="auto"
+      src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/BeepSound.wav"
+    ></audio>
+    <script type="module" src="./main.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
